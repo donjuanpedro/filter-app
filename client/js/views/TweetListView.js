@@ -7,7 +7,7 @@ const TweetListView = Backbone.View.extend({
     <div>
       <form action="/tweets" method="POST">
         <div>
-          <label for="name">New Tweet</label>
+          <label for="name">New Filter</label>
           <input type="text" name="body" />
           <input type="submit" value="Post" />
         </div>

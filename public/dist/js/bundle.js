@@ -110,14 +110,31 @@ const Backbone = require('backbone');
 
 const NavBarView = Backbone.View.extend({
   el: `
-    <nav>
-      <h1 id="title">
-        <a href="/#">Tweeter</a>
-      </h1>
-      <form method="POST" id="logout" action="/logout">
-        <button type="submit">Logout</button>
-      </form>
-    </nav>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Filter</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <form class="navbar-form navbar-right" method="POST" id="logout" action="/logout">
+                  <button type="submit" class="btn btn-default"> Logout</button>
+                </form>
+              </li>
+            </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
   `,
 
   render() {
@@ -163,7 +180,7 @@ const TweetListView = Backbone.View.extend({
     <div>
       <form action="/tweets" method="POST">
         <div>
-          <label for="name">New Tweet</label>
+          <label for="name">New Filter</label>
           <input type="text" name="body" />
           <input type="submit" value="Post" />
         </div>
