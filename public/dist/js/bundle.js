@@ -114,17 +114,9 @@ const NavBarView = Backbone.View.extend({
           <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
               <a class="navbar-brand" href="#">Filter</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
               <li>
                 <form class="navbar-form navbar-right" method="POST" id="logout" action="/logout">
@@ -132,7 +124,6 @@ const NavBarView = Backbone.View.extend({
                 </form>
               </li>
             </ul>
-            </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>
   `,
@@ -178,7 +169,7 @@ const TweetModel = require('../models/TweetModel');
 const TweetListView = Backbone.View.extend({
   el: `
     <div>
-      <form action="/tweets" method="POST">
+      <form id="filterPost" action="/tweets" method="POST">
         <div>
           <label for="name">New Filter</label>
           <input type="text" name="body" />

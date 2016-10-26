@@ -5,7 +5,7 @@ const TweetModel = require('../models/TweetModel');
 const TweetListView = Backbone.View.extend({
   el: `
     <div>
-      <form action="/tweets" method="POST">
+      <form id="filterPost" action="/tweets" method="POST">
         <div>
           <label for="name">New Filter</label>
           <input type="text" name="body" />
