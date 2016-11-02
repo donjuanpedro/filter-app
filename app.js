@@ -20,7 +20,7 @@ const usersTweets = require('./routes/users_tweets');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 // You need to connect to your MongoDB here
-mongoose.connect('mongodb://localhost/filter-app');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/filter-app');
 
 const app = express();
 
